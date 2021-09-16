@@ -15,7 +15,7 @@ export class VideoComponent extends BaseComponent<HTMLElement> {
     )! as HTMLIFrameElement;
 
     iframe.src = "https://www.youtube.com/embed/0xJxgvJO2Xo";
-    console.log(url, "url");
+    console.log(url, "uasrl");
     const titleElement = this.element.querySelector(
       ".video__title"
     )! as HTMLHeadingElement;
