@@ -9,6 +9,7 @@ interface SectionContainer extends Component, Composable {
 type SectionContainerConstructor = {
   new (): SectionContainer;
 };
+
 export class PageItemComponent
   extends BaseComponent<HTMLElement>
   implements SectionContainer

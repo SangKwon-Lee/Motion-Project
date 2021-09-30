@@ -8,6 +8,7 @@ import {
   PageComponent,
   PageItemComponent,
 } from "./components/page/page.js";
+import { InputDialog } from "./components/dialog/dialog.js";
 
 class App {
   private readonly page: Component & Composable;
@@ -32,6 +33,20 @@ class App {
 
     const todo = new TodoComponent("Todo Title", "Todo Item");
     this.page.addChild(todo);
+
+    const imageBtn = document.querySelector("#new-image")! as HTMLButtonElement;
+    imageBtn.addEventListener("click", () => {
+      const dialog = new InputDialog();
+
+      dialog.setOnCloseListener(() => {
+        dialog.removeFrom(document.body);
+      });
+      dialog.setOnSubmitListener(() => {
+        dialog.removeFrom(document.body);
+      });
+
+      dialog.attachTo(document.body);
+    });
   }
 }
 
